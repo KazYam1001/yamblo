@@ -1,6 +1,12 @@
-.sign-up-box {
+.account-head {
   width: 600px;
-  margin: 5em auto;
+  margin: 3em auto 1em;
+  font-size: 20px;
+}
+
+.account-box {
+  width: 600px;
+  margin: 0 auto;
   padding: 0.5em 1em;
   color: #5d627b;
   background: white;
@@ -10,6 +16,7 @@
 
 .button {
   width: 70%;
+  margin-top: 2em;
   position: relative;
   left: 15%;
   border-radius: 4px;
