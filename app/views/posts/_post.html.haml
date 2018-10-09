@@ -1,0 +1,13 @@
+.col.s12.m7
+  .card.horizontal
+    .card-image
+      - if post.image.blank?
+        = image_tag "sample"
+      - else
+        = image_tag "#{post.image}"
+    .card-stacked
+      .card-content
+        %p= post.title
+        %p= post.body.truncate(50)
+      .card-action
+        %a{:href => "#"} 詳細
