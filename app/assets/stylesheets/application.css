@@ -6,3 +6,5 @@
 @import "./reset"
 @import './modules/content'
 @import './modules/account'
+@import './modules/posts'
+
