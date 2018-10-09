@@ -1,16 +1,1 @@
-.post-form
-  = form_with model: @post do |f|
-    .msr_text_03
-      = f.label :title, value: "タイトル"
-      = f.text_field :title
-    .msr_file_03
-      %p サムネイル画像
-      .msr_filebox_03
-        = f.label :image, for: "hidden-file", value: "画像を選択してください" do
-          %i.material-icons add_a_photo
-          = f.file_field :image, id: "hidden-file"
-    .msr_textarea_03
-      %label Textarea
-      %textarea
-    %p.msr_sendbtn_03
-      %input{:type => "submit", :value => "Send"}/
+= render partial: "postform", local: { post: @post }

@@ -1,0 +1,15 @@
+.post-form
+  = form_with model: @post do |f|
+    .msr_text_03
+      = f.label :title, value: "タイトル(必須)"
+      = f.text_field :title
+    .msr_file_03
+      %p サムネイル画像
+      = f.label :image, for: "hidden-file" do
+        %i.material-icons add_a_photo
+        = f.file_field :image, id: "hidden-file"
+    .msr_textarea_03
+      = f.label :body, value: "本文(必須)"
+      = f.text_area :body
+    %p.msr_sendbtn_03
+      = f.submit value: "Send"

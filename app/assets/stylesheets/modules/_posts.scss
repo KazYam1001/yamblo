@@ -44,7 +44,10 @@
 }
 .msr_file_03 > p {
   font-size: 14px;
+  color: #9e9e9e;
   padding-bottom: 0.5em;
+  float: left;
+  margin-right: 0.5em;
 }
 .msr_filebox_03 {
   position: relative;
@@ -66,10 +69,8 @@
   width: 460px;
 }
 
-.msr_filebox_03 i.material-icons {
-  position: absolute;
-  top: 2px;
-  right: 5px;
+div.msr_file_03 > label > i:hover {
+  cursor: pointer ;
 }
 
 #hidden-file {
@@ -109,7 +110,8 @@
 送信ボタン
 ---------------------------------------*/
 .msr_sendbtn_03{
-  margin:0 0 10px;
+  margin:0 auto;
+  width: 180px;
 }
 .msr_sendbtn_03 input[type=submit] {
   background: #ef5350 url(/stylerecipe_img/arrow_white.png) no-repeat;
