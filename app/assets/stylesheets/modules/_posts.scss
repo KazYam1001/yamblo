@@ -1,3 +1,9 @@
+.edit-wrapper {
+  width: 460px;
+  margin: 2em auto;
+  position: relative;
+}
+
 .post-form {
   width: 460px;
   margin: 2em auto;
@@ -144,4 +150,8 @@ div.msr_file_03 > label > i:hover {
 }
 .msr_sendbtn_03 input[disabled=disabled]:hover {
   opacity: 1;
+}
+
+.hidden-delete {
+  display: none;
 }
