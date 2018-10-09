@@ -11,4 +11,17 @@
     %script{:crossorigin => "anonymous", :integrity => "sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=", :src => "https://code.jquery.com/jquery-3.3.1.slim.js"}
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %nav
+      .nav-wrapper.red.darken-4
+        %a.nav-logo{:href => "/"} PetiBlo
+        %ul#nav-mobile.right
+          %li
+            %a{:href => "sass.html"}
+              %i.material-icons account_circle
+          %li
+            %a{:href => "badges.html"}
+              %i.material-icons create
+          %li
+            %a{:href => "collapsible.html"}
+              %i.material-icons search
     = yield
