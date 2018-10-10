@@ -1,4 +1,2 @@
 .edit-wrapper
-  = link_to "/posts/#{params[:id]}", method: :delete do
-    %i.material-icons.delete_btn add_a_photo
   = render partial: "postform", local: { post: @post }

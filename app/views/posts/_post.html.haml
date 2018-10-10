@@ -8,6 +8,18 @@
     .card-stacked
       .card-content
         %p= post.title
+        %hr
         %p= post.body.truncate(50)
       .card-action
-        %a{:href => "#"} 詳細
+        %ul
+          - if user_signed_in? && current_user.id == post.user_id
+            %li
+              = link_to "/posts/#{post.id}", method: :delete do
+                %i.material-icons delete_forever
+            %li
+              = link_to edit_post_path(post) do
+                %i.material-icons mode_edit
+          %li
+            = link_to post_path(post) do
+              %i.material-icons search
+

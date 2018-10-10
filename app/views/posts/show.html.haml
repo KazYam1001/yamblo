@@ -1,0 +1,17 @@
+.row
+  .col.s12.m7
+    .card.large
+      .card-image
+        = image_tag "#{@post.image}", class: "show-img"
+        %span.card-title= @post.title
+      .card-content
+        = simple_format(@post.body)
+      - if user_signed_in? && current_user.id == @post.user_id
+        .card-action
+          %ul
+            %li
+              = link_to "/posts/#{params[:id]}", method: :delete do
+                %i.material-icons delete_forever
+            %li
+              = link_to edit_post_path(@post) do
+                %i.material-icons mode_edit

@@ -1,11 +1,13 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %title PetiBlo
     = csrf_meta_tags
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css", :rel => "stylesheet"}/
-    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}
+    %link{:href => "https://fonts.googleapis.com/css?family=Sawarabi+Mincho|Righteous|Kosugi+Maru", :rel => "stylesheet"}
+    %link{:href => "https://fonts.googleapis.com/css?family=Righteous", :rel => "stylesheet"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"}
     %script{:crossorigin => "anonymous", :integrity => "sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA=", :src => "https://code.jquery.com/jquery-3.3.1.slim.js"}
@@ -15,21 +17,20 @@
       .nav-wrapper.red.darken-4
         %a.nav-logo{:href => "/"} PetiBlo
         %ul#nav-mobile.right
-          %li
-            - if user_signed_in?
+          - if user_signed_in?
+            %li
               = link_to destroy_user_session_path, method: :delete do
-                %i.material-icons account_circle
-            - else
-              = link_to new_user_session_path do
-                %i.material-icons account_circle
-          %li
-            - if user_signed_in?
+                %i.material-icons.sign-out account_circle
+            %li
               = link_to new_post_path do
                 %i.material-icons create
-            - else
+            %li= current_user.name
+          - else
+            %li
+              = link_to new_user_session_path do
+                %i.material-icons account_circle
+            %li
               = link_to new_user_session_path do
                 %i.material-icons create
-          %li
-            %a{:href => "collapsible.html"}
-              %i.material-icons search
+            %li ゲスト
     = yield
