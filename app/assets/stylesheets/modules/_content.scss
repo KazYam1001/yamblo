@@ -21,6 +21,17 @@
           border-color: red;   /* 線色を灰色に */
         }
       }
+      .card-action {
+        padding-right: 1px;
+        ul {
+          li {
+            float: right;
+            i {
+              color: #d50000 ;
+            }
+          }
+        }
+      }
     }
   }
 }
