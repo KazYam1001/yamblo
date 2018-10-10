@@ -1,4 +1,16 @@
 .nav-logo {
   padding: 0 10px 0 46%;
-  font-size: 30px;
+  font-size: 3em;
+  font-family: 'Righteous', cursive;
 }
+
+#nav-mobile {
+  padding-right: 1.5em;
+  li {
+    font-family: 'Kosugi Maru', sans-serif;
+    .sign-out {
+      color: #757575;
+    }
+  }
+}
+

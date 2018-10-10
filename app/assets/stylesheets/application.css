@@ -4,7 +4,9 @@
  */
 
 @import "./reset"
-@import './modules/content'
 @import './modules/account'
+@import './modules/content'
+@import './modules/header'
 @import './modules/posts'
+@import './modules/show'
 
