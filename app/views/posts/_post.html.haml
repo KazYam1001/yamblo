@@ -8,6 +8,7 @@
     .card-stacked
       .card-content
         %p= post.title
+        %hr
         %p= post.body.truncate(50)
       .card-action
         %a{:href => "#"} 詳細
