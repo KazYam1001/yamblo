@@ -23,3 +23,6 @@
       = f.password_field :password_confirmation, autocomplete: "new-password"
     = button_tag class: "button" do
       アカウント作成
+%p.for_account_foot
+  = link_to new_user_session_path do
+    ログインへ

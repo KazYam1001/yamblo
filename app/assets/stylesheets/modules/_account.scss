@@ -77,3 +77,21 @@
   border: none;
   box-shadow: none;
 }
+
+p.for_account_foot {
+  width: 600px;
+  margin: 0.5em auto;
+  color: black;
+  text-align: right;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 1.5em;
+  a:link {
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+  a:hover {
+    color: #ef5350 ;
+  }
+}
