@@ -13,7 +13,7 @@
         .card-action
           %ul
             %li
-              = link_to "/posts/#{@post.id}", remote: true, method: :delete do
+              = link_to "/posts/#{@post.id}", remote: true, method: :delete, data: { confirm: '削除しますか？' } do
                 %i.material-icons delete_forever
             %li
               = link_to edit_post_path(@post), remote: true do
