@@ -1,4 +1,6 @@
 #post_form
+#show_box
 #contents_box
   - if @posts
     = render @posts
+= paginate(@posts)

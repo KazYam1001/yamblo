@@ -9,9 +9,8 @@
       = f.label :password, value: "パスワード"
       %br/
       = f.password_field :password, autocomplete: "current-password"
-    - if devise_mapping.rememberable?
-      .field
-        = f.check_box :remember_me
-        = f.label :remember_me, value: "メールアドレスを記憶する"
     = button_tag class: "button" do
       ログイン
+%p.for_account_foot
+  = link_to new_user_registration_path do
+    アカウントを作る

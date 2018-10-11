@@ -1,4 +1,4 @@
-.col.s12.m7
+.col.s12.m7.box-index
   .card.horizontal
     .card-image
       - if post.image.blank?
@@ -7,14 +7,14 @@
         = image_tag "#{post.image}"
     .card-stacked
       .card-content
-        %p= post.title
+        %p= post.title.truncate(15)
         %hr
         %p= post.body.truncate(50)
       .card-action
         %ul
           - if user_signed_in? && current_user.id == post.user_id
             %li
-              = link_to "/posts/#{post.id}", method: :delete, remote: true do
+              = link_to "/posts/#{post.id}", method: :delete, remote: true, data: { confirm: '削除しますか？' } do
                 %i.material-icons delete_forever
             %li
               = link_to "/posts/#{post.id}/edit", remote: true do

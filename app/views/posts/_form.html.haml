@@ -4,7 +4,7 @@
       = f.label :title, value: "タイトル(必須)"
       = f.text_field :title, class: 'post-title'
     .msr_file_03
-      %p サムネイル画像
+      %p 画像
       = f.label :image, for: "hidden-file" do
         %i.material-icons add_a_photo
         = f.file_field :image, id: "hidden-file"

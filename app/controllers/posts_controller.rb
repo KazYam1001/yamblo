@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.order('created_at DESC')
+    set_all_posts
   end
 
   def create
@@ -28,7 +28,6 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to root_path
     set_all_posts
   end
 
@@ -42,6 +41,6 @@ class PostsController < ApplicationController
   end
 
   def set_all_posts
-    @posts = Post.order('created_at DESC')
+    @posts = Post.order('created_at DESC').page(params[:page]).per(20)
   end
 end
