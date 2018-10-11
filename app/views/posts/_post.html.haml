@@ -14,12 +14,11 @@
         %ul
           - if user_signed_in? && current_user.id == post.user_id
             %li
-              = link_to "/posts/#{post.id}", method: :delete do
+              = link_to "/posts/#{post.id}", method: :delete, remote: true do
                 %i.material-icons delete_forever
             %li
-              = link_to edit_post_path(post) do
+              = link_to "/posts/#{post.id}/edit", remote: true do
                 %i.material-icons mode_edit
           %li
-            = link_to post_path(post) do
+            = link_to post_path(post), remote: true do
               %i.material-icons search
-
