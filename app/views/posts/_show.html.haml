@@ -10,7 +10,7 @@
         .card-action
           %ul
             %li
-              = link_to "/posts/#{params[:id]}", method: :delete do
+              = link_to "/posts/#{@post.id}", method: :delete do
                 %i.material-icons delete_forever
             %li
               = link_to edit_post_path(@post) do
