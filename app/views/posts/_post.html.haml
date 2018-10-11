@@ -1,4 +1,4 @@
-.col.s12.m7
+.col.s12.m7.box-index
   .card.horizontal
     .card-image
       - if post.image.blank?
@@ -7,7 +7,7 @@
         = image_tag "#{post.image}"
     .card-stacked
       .card-content
-        %p= post.title
+        %p= post.title.truncate(15)
         %hr
         %p= post.body.truncate(50)
       .card-action

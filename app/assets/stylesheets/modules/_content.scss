@@ -1,9 +1,11 @@
 #contents_box {
-  width: 500px;
+  width: 600px;
   margin: 3em auto;
-  .col {
+  .col.box-index {
+    max-width: 500px;
+    margin: 0 auto;
     .card-image {
-      max-width: 60%;
+      max-width: 300px;
       max-height: 200px;
       img {
         width: 300px;
@@ -12,51 +14,15 @@
       }
     }
     .card-stacked {
-      width: 200px;
+      max-width: 200px;
+      box-sizing: border-box;
       background: -webkit-linear-gradient(top, rgba(254,255,255,1) 0%,rgba(249,232,233,1) 83%,rgba(255,224,224,1) 100%);
       background: linear-gradient(to bottom, rgba(254,255,255,1) 0%,rgba(249,232,233,1) 83%,rgba(255,224,224,1) 100%);
       .card-content {
+        word-wrap: break-word;
         hr {
-          border-width: 1px 0px 0px 0px; /* 太さ1px */
-          border-color: red;   /* 線色を灰色に */
-        }
-      }
-      .card-action {
-        padding-right: 1px;
-        ul {
-          li {
-            float: right;
-            i {
-              color: #d50000 ;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.content {
-  width: 500px;
-  margin: 3em auto;
-  .col {
-    .card-image {
-      max-width: 60%;
-      max-height: 200px;
-      img {
-        width: 300px;
-        height: 200px;
-        object-fit: cover;
-      }
-    }
-    .card-stacked {
-      width: 200px;
-      background: -webkit-linear-gradient(top, rgba(254,255,255,1) 0%,rgba(249,232,233,1) 83%,rgba(255,224,224,1) 100%);
-      background: linear-gradient(to bottom, rgba(254,255,255,1) 0%,rgba(249,232,233,1) 83%,rgba(255,224,224,1) 100%);
-      .card-content {
-        hr {
-          border-width: 1px 0px 0px 0px; /* 太さ1px */
-          border-color: red;   /* 線色を灰色に */
+          border-width: 1px 0px 0px 0px;
+          border-color: red;
         }
       }
       .card-action {

@@ -28,7 +28,6 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to root_path
     set_all_posts
   end
 

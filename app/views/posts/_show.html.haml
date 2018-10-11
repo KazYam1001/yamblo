@@ -1,6 +1,6 @@
 .row
   .col.s12.m7
-    .card.large
+    .card.large.card-show
       .card-image
         = image_tag "#{@post.image}", class: "show-img"
         %span.card-title= @post.title
@@ -10,8 +10,8 @@
         .card-action
           %ul
             %li
-              = link_to "/posts/#{@post.id}", method: :delete do
+              = link_to "/posts/#{@post.id}", remote: true, method: :delete do
                 %i.material-icons delete_forever
             %li
-              = link_to edit_post_path(@post) do
+              = link_to edit_post_path(@post), remote: true do
                 %i.material-icons mode_edit
