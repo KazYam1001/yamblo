@@ -51,4 +51,7 @@ production:
   <<: *default
   database: yamblo_production
   username: yamblo
+  adapter:  postgresql
+  encording: unicode
+  pool: 5
   password: <%= ENV['YAMBLO_DATABASE_PASSWORD'] %>
