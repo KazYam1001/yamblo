@@ -65,7 +65,10 @@ gem 'pry-rails'
 gem 'rails-i18n'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'kaminari'
 gem 'mechanize'
+gem "loofah", ">= 2.2.3"
+gem "rack", ">= 2.0.6"
